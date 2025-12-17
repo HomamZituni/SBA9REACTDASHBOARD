@@ -24,11 +24,12 @@ export interface TaskFormProps {
 }
 
 export interface TaskFilterProps {
-  onSearchChange: (val: string) => void
-  onStatusFilter: (val: Task["status"] | "") => void
-  onPriorityFilter: (val: Task["priority"] | "") => void
-  onSortChange: (val: "asc" | "desc") => void
+  onSearchChange: (val: string) => void;
+  onStatusFilter: (val: Task['status'] | 'all') => void;
+  onPriorityFilter: (val: Task['priority'] | 'all') => void;
+  onSortChange: (val: 'date-newest' | 'date-oldest' | 'priority') => void;
 }
+
 
 export interface DashboardProps {
   theme: "light" | "dark"
